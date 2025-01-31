@@ -30,6 +30,7 @@ app.mount("/static", StaticFiles(directory="."), name="static")
 # --------- Schémas de données ---------
 
 class RepoConfig(BaseModel):
+    service_name: str
     repo: str
     branch: str
     env: Optional[Dict[str, str]] = None
